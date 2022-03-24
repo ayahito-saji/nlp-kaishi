@@ -1,0 +1,135 @@
+% Sample file for JNLP (Journal of Natural Language Processing)
+% Japanese Paper.
+% For ASCII pLaTeX2e
+% This file requires
+%	jnlp_3.3.cls (include jnlpbbl_2.1.sty)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 他のスタイルファイルは指定しないで下さい．ただし，論文と一緒に送付し	%
+% ていただいた場合はかまいません．この場合，ASCII pLaTeX で動作するも	%
+% のに限ります．							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 16-Nov-20 by Nakanishi Printing Co., Ltd
+% 13-Apr-20 by masayu-a@ninjal.ac.jp (for jother.tex, eother.tex)
+% 27-Dec-17 by Nakanishi Printing Co., Ltd
+% 07-Sep-06 by Nakanishi Printing Co., Ltd (for Platex2e)
+% 13-Jan-95 by m_yama@pluto.ai.kyutech.ac.jp (renamed from theapa to nlpbbl)
+% 30-Nov-94 by nakamura@ai.kyutech.ac.jp, acknowledgment example
+% 08-Nov-94 by nakamura@ai.kyutech.ac.jp, copyright
+% 06-Nov-94 by nakamura@ai.kyutech.ac.jp
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[japanese,tombow,other]{jnlp_3.3}
+\usepackage{jnlpbbl_2.1}
+%%%% Citation Format
+%% \cite{Article_01} -> "(LastName 2006)"
+%% \citeA{Article_01} -> "LastName (2006)" 
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\renewcommand\UrlFont{\rmfamily}
+
+
+%% 以下の設定は，編集部で修正します．
+\Volume{28}
+\Number{1}
+\Month{February}
+\Year{2021}
+\Issuetitle{「　　　　」特集号}
+
+\received{2005}{1}{2}
+\revised{2006}{3}{4}
+\rerevised{2006}{5}{6}
+\accepted{2006}{7}{8}
+
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%   タイトル部分                                      %%%
+%%%% （可能であれば，旧字体ではなく新字体を使って下さい）%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jsubject{論文種別（学会記事）}
+\jtitle{論文タイトル論文タイトル論文タイトル論文タイトル論文タイトル論文タイトル論文タイトル論文タイトル論文タイトル（和文）}
+\jauthor{著者名1\affiref{Author_1} \and 著者名2\affiref{Author_2}}
+% 論文には掲載されませんが，英語タイトル・英語著者名につきましても記載してください。
+\etitle{Title (English)}
+\eauthor{Name1\affiref{Author_1} \and Name2\affiref{Author_2}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headauthor{ヘッダー部：著者名1，著者名2}
+\headtitle{ヘッダー部：論文タイトル}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 所属を指定して下さい．
+%%%% ラベルは上記の jauthor, eauthor とあわせて下さい．
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 論文には掲載されませんが，英語所属につきましても記載してください。
+\affilabel{Author_1}{一人目の所属}{Affiliation-1 (English)}
+\affilabel{Author_2}{二人目の所属}{Affiliation-2 (English)}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+% 以下，論文を記述して下さい．
+% 最後の部分に文献，著者関係の記述がありますので確認して下さい．
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{はじめに}
+
+近年，言語処理に関する理論・アルゴリズム・システムの研究の重要性が高まっ
+てきています\cite{Article_01}．
+わが国のこの分野の研究はすでに30年以上の歴史をもっており，
+研究発表は急速に増加して来ています．
+言語のもつ個別性と普遍性とを考慮する立場からの言語処理研究の重要性も増し，
+言語学，計算機科学の研究者が共通に議論する場も求められています\cite{Book_02}．
+アメリカ，ヨーロッパ，アジア諸国においても同様な状況にあります．
+アメリカを中心として The Association for Computational Linguistics (ACL)があり，
+ヨーロッパには ACL の European Chapter が作られ，
+それぞれ活発な活動を行っています\cite{Inproc_03}．
+このような状況に鑑み，私たちは，わが国の言語処理の研究成果発表の場として，
+また国際的な研究交流の場として，
+1994年4月1日「言語処理学会」(The Association for Natural Language Processing (NLP)) を
+設立しました\cite{Masters_04,Techrep_05}．
+そして，密度の高い議論のできる場としての学会を形成するために，
+その活動対象範囲を以下のように定め，
+目標を明確にすることといたしました\nocite{Web_06}．
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% Acknowledgement %%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\acknowledgment
+
+謝辞はこちらに記述して下さい．
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Bibliography %%%
+%%%%%%%%%%%%%%%%%%%%
+% 参考文献を j_yourrefs.bib に記述し，jbibtex で処理します．
+% bibファイル中の日本語の文献には必ずyomiフィールドを記載して下さい
+\bibliographystyle{jnlpbbl_1.5}
+\bibliography{j_yourrefs}
+
+%%%%%%%%%%%%%%%%%
+%%% Biography %%%
+%%%%%%%%%%%%%%%%%
+\begin{biography}
+\bioauthor{著者1氏名}{%
+著者1の紹介をこちらに記述して下さい．
+}
+\bioauthor{著者2氏名}{%
+著者2の紹介をこちらに記述して下さい．
+}
+
+\end{biography}
+
+
+%%%%\biodate   %%%% 受付日の出力（編集部で設定します）
+
+\end{document}
