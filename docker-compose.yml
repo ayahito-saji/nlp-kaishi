@@ -1,0 +1,8 @@
+version: '2'
+services:
+  docker:
+    image: makisyu/texlive-2020
+    command: sh -c 'platex ./jpaper_3.3.tex && pbibtex jpaper_3.3 && platex ./jpaper_3.3.tex && platex ./jpaper_3.3.tex && platex ./jpaper_3.3.tex && dvipdfmx ./jpaper_3.3.dvi'
+    working_dir: /workdir
+    volumes:
+      - .:/workdir
